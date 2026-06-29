@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 
 const links = [
   { label: 'Features', href: '#features' },
   { label: 'So funktioniert’s', href: '#how' },
-  { label: 'Aktivitäten', href: '#categories' },
+  { label: 'Sicherheit', href: '#trust' },
   { label: 'Stimmen', href: '#testimonials' },
 ]
 
@@ -15,74 +15,72 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
+    const onScroll = () => setScrolled(window.scrollY > 16)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
-      <motion.nav
-        initial={{ y: -24, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className={`flex w-full max-w-6xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 sm:px-6 ${
-          scrolled ? 'glass shadow-lg shadow-black/30' : 'border border-transparent'
-        }`}
-      >
-        <a href="#top" className="flex items-center gap-2">
-          <Logo className="h-8 w-8" />
-          <span className="font-display text-lg font-bold tracking-tight">
-            lets<span className="text-gradient">skee</span>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled ? 'border-b border-line bg-bg/80 backdrop-blur-xl' : 'border-b border-transparent'
+      }`}
+    >
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+        <a href="#top" className="flex items-center gap-2.5">
+          <Logo className="h-7 w-7 text-cream" />
+          <span className="text-[1.05rem] font-semibold tracking-tight text-cream">
+            letsskee
           </span>
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-9 md:flex">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-white/70 transition-colors hover:text-white"
+              className="text-sm text-sand/70 transition-colors hover:text-cream"
             >
               {l.label}
             </a>
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-2 md:flex">
           <a
             href="#waitlist"
-            className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-ink transition-transform hover:scale-105"
+            className="rounded-full bg-cream px-5 py-2.5 text-sm font-semibold text-bg transition-colors hover:bg-white"
           >
-            Beta sichern
+            Beta beitreten
           </a>
         </div>
 
         <button
-          className="md:hidden"
+          className="text-cream md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Menü"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
-      </motion.nav>
+      </nav>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="glass absolute top-20 left-4 right-4 z-50 rounded-2xl p-4 md:hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden border-t border-line bg-bg md:hidden"
           >
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 px-5 py-4">
               {links.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 text-sm text-white/80 hover:bg-white/5"
+                  className="rounded-lg px-3 py-3 text-sm text-sand/80 hover:bg-surface"
                 >
                   {l.label}
                 </a>
@@ -90,9 +88,9 @@ export default function Navbar() {
               <a
                 href="#waitlist"
                 onClick={() => setOpen(false)}
-                className="mt-2 rounded-full bg-white px-5 py-3 text-center text-sm font-semibold text-ink"
+                className="mt-2 rounded-full bg-cream px-5 py-3 text-center text-sm font-semibold text-bg"
               >
-                Beta sichern
+                Beta beitreten
               </a>
             </div>
           </motion.div>

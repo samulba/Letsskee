@@ -1,14 +1,22 @@
 # letsskee — Landing Page
 
-Moderne, animierte Landingpage für **letsskee** ([letsskee.app](https://letsskee.app)) —
-die Social-/Meetup-App, mit der du Leute für alles findest, worauf du Lust hast.
+Moderne, editoriale Landingpage für **letsskee** ([letsskee.app](https://letsskee.app)) —
+die Social-/Meetup-App, mit der du echte Menschen für echte Pläne findest:
+spontan, lokal, verifiziert.
+
+## Design
+
+- Warme, ruhige Palette auf einem Akzentton (kein Regenbogen-Gradient)
+- Editorial-Typografie: **Fraunces** (Display) + **Inter** (Text)
+- Dezente Film-Grain-Textur für Tiefe statt flachem Flat-Look
+- Trust-first: eigene Sicherheits-Sektion, verifizierte Profile, DSGVO
 
 ## Tech-Stack
 
 - **Vite 6** — Build-Tool & Dev-Server
 - **React 18**
 - **Tailwind CSS 4** (CSS-first Config via `@theme`)
-- **Framer Motion** — Scroll- & Entrance-Animationen
+- **Framer Motion** — dezente Scroll- & Entrance-Animationen
 - **lucide-react** — Icons
 
 ## Lokal starten
@@ -31,20 +39,22 @@ npm run preview   # Production-Build lokal vorschauen
 
 ```
 src/
-├── App.jsx                 # Komposition aller Sektionen + Ambient-Glows
-├── index.css               # Tailwind-Import, Theme-Tokens, Utilities, Keyframes
+├── App.jsx                 # Komposition aller Sektionen
+├── index.css               # Tailwind-Import, Theme-Tokens, Grain, Utilities
 └── components/
-    ├── Navbar.jsx          # Sticky Glass-Navbar (mit Mobile-Menü)
-    ├── Hero.jsx            # Hero mit Headline & Phone-Mockup
-    ├── PhoneMockup.jsx     # Animiertes App-Mockup mit Floating-Chips
-    ├── LogoMarquee.jsx     # Endlos-laufende Aktivitäten-Leiste
-    ├── Features.jsx        # 6 Feature-Karten
+    ├── Navbar.jsx          # Sticky Navbar (mit Mobile-Menü)
+    ├── Hero.jsx            # Hero mit Headline & App-Preview
+    ├── AppPreview.jsx      # Realistische App-UI mit Initial-Avataren
+    ├── LogoMarquee.jsx     # Laufende Aktivitäten-Leiste
+    ├── Features.jsx        # Bento-Layout mit Mini-Preview
     ├── HowItWorks.jsx      # 3-Schritte-Erklärung
-    ├── Categories.jsx      # Aktivitäten-Bento-Grid
-    ├── Testimonials.jsx    # Nutzerstimmen
+    ├── Trust.jsx           # Sicherheit & Vertrauen
+    ├── Categories.jsx      # Aktivitäten-Grid mit Live-Zählern
+    ├── Testimonials.jsx    # Nutzerstimmen + Rating
     ├── CTA.jsx             # Waitlist-/Beta-Anmeldung
     ├── Footer.jsx
-    ├── Logo.jsx            # SVG-Logo
+    ├── Logo.jsx            # SVG-Wordmark-Mark
+    ├── SectionHeading.jsx  # Wiederverwendbare Section-Überschrift
     └── Reveal.jsx          # Reusable Scroll-Reveal-Wrapper
 ```
 

@@ -1,34 +1,30 @@
 const items = [
-  '🧗 Bouldern',
-  '☕ Coffee Dates',
-  '🎾 Padel',
-  '🍜 Foodie-Runs',
-  '🎬 Kino',
-  '🏃 Running Crew',
-  '🎟️ Konzerte',
-  '🎨 Museum Hops',
-  '🍻 Afterwork',
-  '🌅 Sunrise Hikes',
-  '🎲 Game Nights',
-  '🏄 Weekend Trips',
+  'Bouldern',
+  'Coffee & Co-Work',
+  'Padel',
+  'Foodie-Runs',
+  'Kino',
+  'Running Crew',
+  'Live-Konzerte',
+  'Museum Hops',
+  'Afterwork',
+  'Sunrise Hikes',
+  'Game Nights',
+  'Weekend Trips',
 ]
 
 export default function LogoMarquee() {
   return (
-    <section className="relative border-y border-white/5 py-6">
-      <div className="mx-auto mb-2 max-w-6xl px-4">
-        <p className="text-center text-xs uppercase tracking-[0.2em] text-white/40">
-          Für alles, worauf man sonst niemanden findet
-        </p>
-      </div>
-      <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
-        <div className="animate-marquee flex shrink-0 items-center gap-4 pr-4">
+    <section className="relative border-y border-line py-5">
+      <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="animate-marquee flex shrink-0 items-center gap-10 pr-10">
           {[...items, ...items].map((item, i) => (
             <span
               key={i}
-              className="glass whitespace-nowrap rounded-full px-5 py-2 text-sm text-white/75"
+              className="flex items-center gap-10 whitespace-nowrap text-sm font-medium tracking-wide text-sand/55"
             >
               {item}
+              <span className="h-1 w-1 rounded-full bg-accent/60" />
             </span>
           ))}
         </div>

@@ -1,41 +1,40 @@
 import Logo from './Logo'
 
 const cols = [
-  {
-    title: 'Produkt',
-    links: ['Features', 'So funktioniert’s', 'Aktivitäten', 'Beta'],
-  },
-  {
-    title: 'Unternehmen',
-    links: ['Über uns', 'Blog', 'Karriere', 'Presse'],
-  },
-  {
-    title: 'Rechtliches',
-    links: ['Datenschutz', 'AGB', 'Impressum', 'Cookies'],
-  },
+  { title: 'Produkt', links: ['Features', 'So funktioniert’s', 'Aktivitäten', 'Beta'] },
+  { title: 'Unternehmen', links: ['Über uns', 'Blog', 'Karriere', 'Presse'] },
+  { title: 'Rechtliches', links: ['Datenschutz', 'AGB', 'Impressum', 'Cookies'] },
 ]
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/5 px-4 py-14">
+    <footer className="relative border-t border-line px-5 py-14 sm:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <a href="#top" className="flex items-center gap-2">
-              <Logo className="h-8 w-8" />
-              <span className="font-display text-lg font-bold tracking-tight">
-                lets<span className="text-gradient">skee</span>
+            <a href="#top" className="flex items-center gap-2.5">
+              <Logo className="h-7 w-7 text-cream" />
+              <span className="text-[1.05rem] font-semibold tracking-tight text-cream">
+                letsskee
               </span>
             </a>
-            <p className="mt-4 max-w-xs text-sm text-white/55">
-              Finde Leute für alles, worauf du Lust hast. Spontan, lokal, echt.
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
+              Finde echte Menschen für echte Pläne. Spontan, lokal, verifiziert.
             </p>
-            <div className="mt-5 flex gap-3">
+            <p className="mt-4 text-sm text-muted">
+              <a
+                href="mailto:hey@letsskee.app"
+                className="text-sand transition-colors hover:text-cream"
+              >
+                hey@letsskee.app
+              </a>
+            </p>
+            <div className="mt-5 flex gap-2">
               {['Instagram', 'TikTok', 'X'].map((s) => (
                 <a
                   key={s}
                   href="#"
-                  className="glass flex h-9 items-center justify-center rounded-full px-4 text-xs text-white/70 transition-colors hover:text-white"
+                  className="rounded-full border border-line px-3.5 py-1.5 text-xs text-muted transition-colors hover:border-sand/40 hover:text-cream"
                 >
                   {s}
                 </a>
@@ -45,13 +44,13 @@ export default function Footer() {
 
           {cols.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-semibold text-white">{col.title}</h4>
+              <h4 className="text-sm font-semibold text-cream">{col.title}</h4>
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-sm text-white/55 transition-colors hover:text-white"
+                      className="text-sm text-muted transition-colors hover:text-cream"
                     >
                       {l}
                     </a>
@@ -62,9 +61,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-xs text-white/40 sm:flex-row">
-          <p>© {new Date().getFullYear()} letsskee. Made with ♥ für mehr echtes Leben.</p>
-          <p>letsskee.app</p>
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 text-xs text-muted sm:flex-row">
+          <p>© {new Date().getFullYear()} letsskee. Alle Rechte vorbehalten.</p>
+          <p className="inline-flex items-center gap-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Made in Berlin
+          </p>
         </div>
       </div>
     </footer>

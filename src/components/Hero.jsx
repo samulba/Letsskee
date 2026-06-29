@@ -1,112 +1,135 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, MapPin, Users } from 'lucide-react'
-import PhoneMockup from './PhoneMockup'
+import { ArrowRight, ShieldCheck } from 'lucide-react'
+import AppPreview from './AppPreview'
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+const ease = [0.22, 1, 0.36, 1]
+const up = {
+  hidden: { opacity: 0, y: 16 },
   show: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, delay: i * 0.08, ease },
   }),
 }
 
+const members = [
+  { initials: 'MK', tone: 'bg-[#3a2e28] text-accent-2' },
+  { initials: 'JL', tone: 'bg-[#2e2a3a] text-sand' },
+  { initials: 'AS', tone: 'bg-[#2a342e] text-sand' },
+  { initials: 'TR', tone: 'bg-[#342a2a] text-accent-2' },
+]
+
 export default function Hero() {
   return (
-    <section id="top" className="relative px-4 pt-36 pb-20 sm:pt-44 sm:pb-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+    <section id="top" className="relative px-5 pt-32 pb-16 sm:px-8 sm:pt-40 sm:pb-24">
+      {/* subtle warm radial behind hero */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -top-32 right-[8%] h-[440px] w-[440px] rounded-full bg-accent/10 blur-[120px]" />
+      </div>
+
+      <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Copy */}
-        <div className="text-center lg:text-left">
+        <div>
           <motion.div
-            variants={fadeUp}
+            variants={up}
             initial="hidden"
             animate="show"
             custom={0}
-            className="glass mx-auto inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-white/80 lg:mx-0"
+            className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-3.5 py-1.5 text-xs font-medium text-sand"
           >
-            <Sparkles className="h-3.5 w-3.5 text-rose" />
-            Jetzt in der Private Beta
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+            </span>
+            Private Beta · jetzt in 12 Städten
           </motion.div>
 
           <motion.h1
-            variants={fadeUp}
+            variants={up}
             initial="hidden"
             animate="show"
             custom={1}
-            className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+            className="mt-7 font-display text-[2.75rem] font-medium leading-[1.04] tracking-[-0.02em] text-cream sm:text-6xl lg:text-[4.25rem]"
           >
-            Finde Leute für
-            <br />
-            <span className="text-gradient">alles</span>, worauf du
-            <br className="hidden sm:block" /> Lust hast.
+            Finde{' '}
+            <span className="italic text-accent">deine Leute</span>{' '}
+            für alles, worauf du Lust hast.
           </motion.h1>
 
           <motion.p
-            variants={fadeUp}
+            variants={up}
             initial="hidden"
             animate="show"
             custom={2}
-            className="mx-auto mt-6 max-w-xl text-lg text-white/65 lg:mx-0"
+            className="mt-6 max-w-lg text-lg leading-relaxed text-muted"
           >
-            Bouldern, Kaffee, Late-Night-Ramen oder ein spontanes Konzert –
-            <span className="text-white"> letsskee </span>
-            verbindet dich mit echten Menschen in deiner Nähe. Spontan, lokal,
-            ohne Smalltalk-Stress.
+            Bouldern nach Feierabend, Sonntags-Brunch, spontan ins Konzert.
+            letsskee verbindet dich mit{' '}
+            <span className="text-cream">verifizierten Menschen</span> in deiner
+            Nähe, die genau jetzt dasselbe vorhaben.
           </motion.p>
 
           <motion.div
-            variants={fadeUp}
+            variants={up}
             initial="hidden"
             animate="show"
             custom={3}
-            className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start sm:justify-center"
+            className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
             <a
               href="#waitlist"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-coral via-rose to-violet px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-rose/25 transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-cream px-7 py-3.5 text-sm font-semibold text-bg transition-colors hover:bg-white"
             >
-              Beta-Zugang sichern
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              Beta beitreten
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href="#how"
-              className="glass inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white/85 transition-colors hover:text-white"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-cream transition-colors hover:border-sand/40"
             >
               So funktioniert’s
             </a>
           </motion.div>
 
           <motion.div
-            variants={fadeUp}
+            variants={up}
             initial="hidden"
             animate="show"
             custom={4}
-            className="mt-10 flex items-center justify-center gap-6 text-sm text-white/55 lg:justify-start"
+            className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-3"
           >
-            <div className="flex items-center gap-2">
-              <Users className="h-4 w-4 text-rose" />
-              <span>
-                <span className="font-semibold text-white">12.000+</span> auf der
-                Warteliste
-              </span>
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2.5">
+                {members.map((m) => (
+                  <div
+                    key={m.initials}
+                    className={`flex h-8 w-8 items-center justify-center rounded-full text-[11px] font-semibold ring-2 ring-bg ${m.tone}`}
+                  >
+                    {m.initials}
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-muted">
+                <span className="font-semibold text-cream">4.000+</span> Early
+                Member
+              </p>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-violet" />
-              <span>
-                <span className="font-semibold text-white">40+</span> Städte
-              </span>
-            </div>
+            <span className="hidden h-4 w-px bg-line sm:block" />
+            <p className="inline-flex items-center gap-1.5 text-sm text-muted">
+              <ShieldCheck className="h-4 w-4 text-accent" />
+              Verifiziert · keine Werbung · DSGVO-konform
+            </p>
           </motion.div>
         </div>
 
         {/* Visual */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 30 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="relative flex justify-center"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease, delay: 0.25 }}
+          className="relative flex justify-center lg:justify-end"
         >
-          <PhoneMockup />
+          <AppPreview />
         </motion.div>
       </div>
     </section>

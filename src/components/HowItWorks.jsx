@@ -1,4 +1,5 @@
 import Reveal from './Reveal'
+import SectionHeading from './SectionHeading'
 
 const steps = [
   {
@@ -8,47 +9,39 @@ const steps = [
   },
   {
     num: '02',
-    title: 'Match mit deiner Crew',
-    desc: 'letsskee zeigt dir Leute in der Nähe mit demselben Plan. Ein Tap und ihr seid verbunden.',
+    title: 'Triff deine Crew',
+    desc: 'letsskee zeigt dir verifizierte Leute in der Nähe mit demselben Plan. Ein Tap, und ihr seid verbunden.',
   },
   {
     num: '03',
-    title: 'Trefft euch – im echten Leben',
-    desc: 'Chat, Treffpunkt, los. Aus der App raus, ins echte Leben rein.',
+    title: 'Seht euch – im echten Leben',
+    desc: 'Treffpunkt klären, hingehen, loslegen. Raus aus der App, rein ins echte Leben.',
   },
 ]
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="relative px-4 py-24 sm:py-32">
+    <section id="how" className="relative px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-violet">
-            So funktioniert’s
-          </p>
-          <h2 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            In <span className="text-gradient">3 Schritten</span> unter Leuten
-          </h2>
-        </Reveal>
+        <SectionHeading
+          eyebrow="So funktioniert’s"
+          title="In drei Schritten unter Leute."
+        />
 
-        <div className="relative mt-16 grid gap-8 md:grid-cols-3">
-          {/* connecting line */}
-          <div className="absolute left-0 right-0 top-12 hidden h-px bg-gradient-to-r from-transparent via-white/15 to-transparent md:block" />
-
+        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-3">
           {steps.map((s, i) => (
-            <Reveal key={s.num} delay={i * 0.12} className="relative">
-              <div className="flex flex-col items-center text-center">
-                <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-full glass">
-                  <span className="text-gradient font-display text-3xl font-bold">
+            <Reveal key={s.num} delay={i * 0.1} className="bg-bg">
+              <div className="h-full p-8 sm:p-9">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-display text-3xl font-medium text-accent">
                     {s.num}
                   </span>
+                  <span className="h-px flex-1 bg-line" />
                 </div>
-                <h3 className="mt-6 font-display text-xl font-semibold">
+                <h3 className="mt-5 font-display text-xl font-medium text-cream">
                   {s.title}
                 </h3>
-                <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/60">
-                  {s.desc}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{s.desc}</p>
               </div>
             </Reveal>
           ))}

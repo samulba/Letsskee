@@ -1,71 +1,87 @@
-import { Zap, ShieldCheck, MapPin, CalendarHeart, Users, Sparkles } from 'lucide-react'
+import { Zap, MapPin, Users, CalendarCheck } from 'lucide-react'
 import Reveal from './Reveal'
+import SectionHeading from './SectionHeading'
 
-const features = [
-  {
-    icon: Zap,
-    title: 'Spontan statt geplant',
-    desc: 'Lust auf jetzt? Poste ein Hangout und finde in Minuten Leute, die mitkommen. Kein Wochen-im-Voraus-Planen.',
-  },
+const small = [
   {
     icon: MapPin,
     title: 'Echt lokal',
-    desc: 'Alles, was zählt, passiert in deiner Nähe. letsskee zeigt dir, was gerade in deiner Stadt läuft.',
+    desc: 'Nur Pläne aus deinem Kiez. Keine endlose Liste – das, was heute wirklich um die Ecke passiert.',
   },
   {
     icon: Users,
     title: 'Gleiche Wellenlänge',
-    desc: 'Smartes Matching nach Interessen & Vibe – du triffst Leute, mit denen es einfach passt.',
+    desc: 'Matching nach Interessen statt nach Aussehen. Du triffst Leute, mit denen es einfach passt.',
   },
   {
-    icon: ShieldCheck,
-    title: 'Sicher & verifiziert',
-    desc: 'Verifizierte Profile, Bewertungen und ein Vibe-Check, damit du dich entspannt treffen kannst.',
-  },
-  {
-    icon: CalendarHeart,
+    icon: CalendarCheck,
     title: 'Von Idee zu Plan',
-    desc: 'Chat, Treffpunkt, Uhrzeit – alles an einem Ort. Kein WhatsApp-Gruppen-Chaos mehr.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Neue Routinen',
-    desc: 'Aus spontanen Treffen werden feste Crews. Deine Running-Gruppe, dein Game-Night-Squad.',
+    desc: 'Chat, Treffpunkt, Uhrzeit – an einem Ort. Schluss mit dem WhatsApp-Gruppen-Chaos.',
   },
 ]
 
 export default function Features() {
   return (
-    <section id="features" className="relative px-4 py-24 sm:py-32">
+    <section id="features" className="relative px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-rose">
-            Warum letsskee
-          </p>
-          <h2 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            Weniger scrollen.
-            <br />
-            <span className="text-gradient">Mehr erleben.</span>
-          </h2>
-          <p className="mt-5 text-lg text-white/60">
-            Dating-Apps gibt’s genug. letsskee ist für alles dazwischen – echte
-            Menschen, echte Aktivitäten, ohne Druck.
-          </p>
-        </Reveal>
+        <SectionHeading
+          align="left"
+          eyebrow="Warum letsskee"
+          title="Gebaut für echtes Treffen — nicht für endloses Swipen."
+          sub="Dating-Apps gibt es genug. letsskee ist für alles dazwischen: gemeinsame Aktivitäten mit echten Menschen, ohne Druck und ohne Algorithmus-Spielchen."
+        />
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <Reveal key={f.title} delay={(i % 3) * 0.08}>
-              <div className="group glass h-full rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 hover:border-white/20">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-coral/20 to-violet/20 ring-1 ring-white/10 transition-transform group-hover:scale-110">
-                  <f.icon className="h-6 w-6 text-rose" />
+        <div className="mt-14 grid gap-4 lg:grid-cols-3">
+          {/* Hero feature */}
+          <Reveal className="lg:col-span-3">
+            <div className="card relative overflow-hidden p-8 sm:p-10">
+              <div className="grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr]">
+                <div>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-surface-2">
+                    <Zap className="h-5 w-5 text-accent" />
+                  </div>
+                  <h3 className="mt-5 font-display text-2xl font-medium text-cream">
+                    Spontan statt drei Wochen Vorlauf
+                  </h3>
+                  <p className="mt-3 max-w-md leading-relaxed text-muted">
+                    Lust auf jetzt? Poste ein Hangout und finde in Minuten Leute,
+                    die mitkommen. Aus „man müsste mal“ wird heute Abend.
+                  </p>
                 </div>
-                <h3 className="mt-5 font-display text-xl font-semibold">
+                <div className="relative">
+                  <div className="card flex items-center gap-3 bg-surface p-4">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#3a2e28] text-[11px] font-semibold text-accent-2">
+                      LM
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-medium text-cream">
+                        „Jemand spontan Padel um 19h?“
+                      </p>
+                      <p className="text-xs text-muted">Lea · vor 2 Min · Neukölln</p>
+                    </div>
+                    <span className="rounded-full bg-accent px-3 py-1.5 text-[11px] font-semibold text-white">
+                      +3
+                    </span>
+                  </div>
+                  <div className="mt-3 ml-8 inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-[11px] text-muted">
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                    In 4 Minuten zusammengefunden
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {small.map((f, i) => (
+            <Reveal key={f.title} delay={i * 0.07}>
+              <div className="card group h-full p-7 transition-colors hover:border-sand/25">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-surface-2">
+                  <f.icon className="h-5 w-5 text-accent" />
+                </div>
+                <h3 className="mt-5 font-display text-xl font-medium text-cream">
                   {f.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">
-                  {f.desc}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{f.desc}</p>
               </div>
             </Reveal>
           ))}
