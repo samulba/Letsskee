@@ -21,7 +21,7 @@ const members = [
 
 export default function Hero() {
   return (
-    <section id="top" className="relative px-5 pt-32 pb-16 sm:px-8 sm:pt-40 sm:pb-24">
+    <section id="top" className="relative px-5 pt-14 pb-16 sm:px-8 sm:pt-20 sm:pb-24">
       {/* subtle warm radial behind hero */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-32 right-[8%] h-[440px] w-[440px] rounded-full bg-accent/10 blur-[120px]" />
