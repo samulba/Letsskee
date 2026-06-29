@@ -20,8 +20,8 @@ function Avatars({ people }) {
 
 const feed = [
   {
-    title: 'Feierabend-Bouldern',
-    where: 'Boulderwelt Ost · heute 18:30',
+    title: 'Powder-Day Freeride',
+    where: 'Gaislachkogl · heute 09:00',
     people: [
       { i: 'MK', tone: 'bg-[#3a2e28] text-accent-2' },
       { i: 'JL', tone: 'bg-[#2e2a3a] text-sand' },
@@ -31,8 +31,8 @@ const feed = [
     primary: true,
   },
   {
-    title: 'Sonntags-Brunch',
-    where: 'Café Mila · So 11:00',
+    title: 'Park-Session',
+    where: 'Obergurgl Snowpark · 13:00',
     people: [
       { i: 'TR', tone: 'bg-[#342a2a] text-accent-2' },
       { i: 'NK', tone: 'bg-[#2e2a3a] text-sand' },
@@ -51,10 +51,10 @@ export default function AppPreview() {
         {/* App header */}
         <div className="flex items-center justify-between border-b border-line px-5 py-4">
           <div>
-            <p className="text-[11px] text-muted">Heute in deiner Nähe</p>
+            <p className="text-[11px] text-muted">Heute am Berg</p>
             <p className="flex items-center gap-1.5 text-sm font-semibold text-cream">
               <MapPin className="h-3.5 w-3.5 text-accent" />
-              Kreuzberg, Berlin
+              Sölden, Tirol
             </p>
           </div>
           <div className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-cream">
@@ -105,7 +105,7 @@ export default function AppPreview() {
 
           <div className="flex items-center justify-center gap-1.5 pt-1 text-[11px] text-muted">
             <span className="h-1 w-1 rounded-full bg-accent" />
-            14 weitere Pläne heute
+            14 weitere Sessions heute
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function AppPreview() {
         </div>
         <div className="leading-tight">
           <p className="text-[11px] font-semibold text-cream">Profil verifiziert</p>
-          <p className="text-[10px] text-muted">Foto + Ausweis geprüft</p>
+          <p className="text-[10px] text-muted">Foto + Level geprüft</p>
         </div>
       </motion.div>
     </div>

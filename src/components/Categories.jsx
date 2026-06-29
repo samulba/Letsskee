@@ -3,12 +3,12 @@ import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
 const cats = [
-  { label: 'Sport & Move', desc: 'Bouldern, Padel, Laufgruppen', live: 28 },
-  { label: 'Food & Drinks', desc: 'Brunch, Ramen, Afterwork', live: 41 },
-  { label: 'Events & Kultur', desc: 'Konzerte, Ausstellungen, Kino', live: 19 },
-  { label: 'Outdoor & Trips', desc: 'Hikes, Radtouren, Wochenenden', live: 12 },
-  { label: 'Chill & Games', desc: 'Game Nights, Boardgames, Quiz', live: 23 },
-  { label: 'Work & Network', desc: 'Co-Working, Meetups, Skill-Swap', live: 16 },
+  { label: 'Piste & Carving', desc: 'Genuss-Carven, Pistenflow', live: 34 },
+  { label: 'Freeride & Backcountry', desc: 'Powder, Lines, Tiefschnee', live: 27 },
+  { label: 'Park & Freestyle', desc: 'Kicker, Rails, Pipe', live: 18 },
+  { label: 'Skitouren & Langlauf', desc: 'Aufstieg, Loipe, Ruhe', live: 14 },
+  { label: 'Après-Ski & Hütte', desc: 'Einkehr, Drinks, Sonne', live: 39 },
+  { label: 'Trips & Roadtrips', desc: 'Wochenenden, neue Gebiete', live: 11 },
 ]
 
 export default function Categories() {
@@ -16,9 +16,9 @@ export default function Categories() {
     <section id="categories" className="relative px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Aktivitäten"
-          title="Wofür auch immer du gerade brennst."
-          sub="Ob nervöser Newbie oder alteingesessener Local – für deinen Plan ist immer jemand dabei."
+          eyebrow="Disziplinen"
+          title="Egal wie du den Berg fährst."
+          sub="Ob nervöser Anfänger oder alteingesessener Local – für deine Session ist immer jemand dabei."
         />
 
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">

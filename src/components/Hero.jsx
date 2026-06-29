@@ -41,7 +41,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
             </span>
-            Private Beta · jetzt in 12 Städten
+            Private Beta · jetzt in 12 Skigebieten
           </motion.div>
 
           <motion.h1
@@ -52,8 +52,8 @@ export default function Hero() {
             className="mt-7 font-display text-[2.75rem] font-medium leading-[1.04] tracking-[-0.02em] text-cream sm:text-6xl lg:text-[4.25rem]"
           >
             Finde{' '}
-            <span className="italic text-accent">deine Leute</span>{' '}
-            für alles, worauf du Lust hast.
+            <span className="italic text-accent">deine Crew</span>{' '}
+            für den Berg.
           </motion.h1>
 
           <motion.p
@@ -63,10 +63,10 @@ export default function Hero() {
             custom={2}
             className="mt-6 max-w-lg text-lg leading-relaxed text-muted"
           >
-            Bouldern nach Feierabend, Sonntags-Brunch, spontan ins Konzert.
-            letsskee verbindet dich mit{' '}
-            <span className="text-cream">verifizierten Menschen</span> in deiner
-            Nähe, die genau jetzt dasselbe vorhaben.
+            Powder-Days, Freeride-Lines, Park-Sessions oder Après-Ski. letsskee
+            verbindet dich mit{' '}
+            <span className="text-cream">verifizierten Ridern</span> in deinem
+            Skigebiet, die genau jetzt dasselbe vorhaben.
           </motion.p>
 
           <motion.div
@@ -110,8 +110,8 @@ export default function Hero() {
                 ))}
               </div>
               <p className="text-sm text-muted">
-                <span className="font-semibold text-cream">4.000+</span> Early
-                Member
+                <span className="font-semibold text-cream">4.000+</span> Rider
+                dabei
               </p>
             </div>
             <span className="hidden h-4 w-px bg-line sm:block" />

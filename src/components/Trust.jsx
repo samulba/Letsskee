@@ -1,4 +1,4 @@
-import { BadgeCheck, Lock, Flag, EyeOff } from 'lucide-react'
+import { BadgeCheck, Lock, Mountain, Flag } from 'lucide-react'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
@@ -6,7 +6,12 @@ const pillars = [
   {
     icon: BadgeCheck,
     title: 'Verifizierte Profile',
-    desc: 'Jedes Profil wird mit Foto und Ausweis geprüft. Du weißt, wer dir gegenübersitzt.',
+    desc: 'Jedes Profil wird mit Foto und Ausweis geprüft. Du weißt, mit wem du fährst.',
+  },
+  {
+    icon: Mountain,
+    title: 'Level & Bewertungen',
+    desc: 'Können und Fahrstil sind sichtbar – damit ihr zusammenpasst und niemand auf der falschen Piste landet.',
   },
   {
     icon: Lock,
@@ -14,14 +19,9 @@ const pillars = [
     desc: 'Deine Daten gehören dir. DSGVO-konform, Server in der EU, kein Verkauf an Dritte.',
   },
   {
-    icon: EyeOff,
-    title: 'Keine Werbung, kein Tracking',
-    desc: 'Kein Aufmerksamkeits-Algorithmus, keine Anzeigen. Wir verdienen mit der App, nicht mit dir.',
-  },
-  {
     icon: Flag,
     title: 'Melden & blockieren',
-    desc: 'Bewertungen nach Treffen und ein Klick zum Melden. Ein Team prüft jeden Hinweis.',
+    desc: 'Bewertungen nach jeder Session und ein Klick zum Melden. Ein Team prüft jeden Hinweis.',
   },
 ]
 
@@ -33,8 +33,8 @@ export default function Trust() {
           <SectionHeading
             align="left"
             eyebrow="Sicherheit & Vertrauen"
-            title="Fremde treffen sollte sich sicher anfühlen."
-            sub="Deshalb ist Vertrauen bei letsskee kein Feature, sondern die Grundlage. So sorgen wir dafür, dass du dich entspannt treffen kannst."
+            title="Mit Fremden am Berg fahren sollte sich sicher anfühlen."
+            sub="Deshalb ist Vertrauen bei letsskee kein Feature, sondern die Grundlage. So sorgen wir dafür, dass du dich entspannt mit neuen Ridern treffen kannst."
           />
 
           <div className="grid gap-4 sm:grid-cols-2">

@@ -5,18 +5,18 @@ import SectionHeading from './SectionHeading'
 const small = [
   {
     icon: MapPin,
-    title: 'Echt lokal',
-    desc: 'Nur Pläne aus deinem Kiez. Keine endlose Liste – das, was heute wirklich um die Ecke passiert.',
+    title: 'Direkt im Skigebiet',
+    desc: 'Nur Sessions aus deinem Gebiet. Keine endlose Liste – das, was heute wirklich am Berg läuft.',
   },
   {
     icon: Users,
-    title: 'Gleiche Wellenlänge',
-    desc: 'Matching nach Interessen statt nach Aussehen. Du triffst Leute, mit denen es einfach passt.',
+    title: 'Gleiches Level, gleicher Stil',
+    desc: 'Matching nach Können und Fahrstil. Vom Genuss-Carver bis Freerider – du triffst Leute, bei denen das Tempo passt.',
   },
   {
     icon: CalendarCheck,
-    title: 'Von Idee zu Plan',
-    desc: 'Chat, Treffpunkt, Uhrzeit – an einem Ort. Schluss mit dem WhatsApp-Gruppen-Chaos.',
+    title: 'Von Idee zu Abfahrt',
+    desc: 'Treffpunkt an der Bergstation, Uhrzeit, Lift – alles an einem Ort. Schluss mit dem WhatsApp-Chaos.',
   },
 ]
 
@@ -27,43 +27,45 @@ export default function Features() {
         <SectionHeading
           align="left"
           eyebrow="Warum letsskee"
-          title="Gebaut für echtes Treffen — nicht für endloses Swipen."
-          sub="Dating-Apps gibt es genug. letsskee ist für alles dazwischen: gemeinsame Aktivitäten mit echten Menschen, ohne Druck und ohne Algorithmus-Spielchen."
+          title="Gebaut fürs gemeinsame Fahren — nicht für endloses Swipen."
+          sub="letsskee bringt dich mit Ridern zusammen, die genau jetzt auf den Berg wollen. Echte Sessions, gleiches Level, ohne Druck."
         />
 
         <div className="mt-14 grid gap-4 lg:grid-cols-3">
           {/* Hero feature */}
-          <Reveal className="lg:col-span-3">
-            <div className="card relative overflow-hidden p-8 sm:p-10">
+          <Reveal className="min-w-0 lg:col-span-3">
+            <div className="card relative overflow-hidden p-6 sm:p-10">
               <div className="grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr]">
-                <div>
+                <div className="min-w-0">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-surface-2">
                     <Zap className="h-5 w-5 text-accent" />
                   </div>
                   <h3 className="mt-5 font-display text-2xl font-medium text-cream">
-                    Spontan statt drei Wochen Vorlauf
+                    Spontan statt allein am Lift
                   </h3>
                   <p className="mt-3 max-w-md leading-relaxed text-muted">
-                    Lust auf jetzt? Poste ein Hangout und finde in Minuten Leute,
-                    die mitkommen. Aus „man müsste mal“ wird heute Abend.
+                    Lust auf jetzt? Poste eine Session und finde in Minuten Rider,
+                    die mitkommen. Aus „müsste mal wieder“ wird heute am Berg.
                   </p>
                 </div>
-                <div className="relative">
-                  <div className="card flex items-center gap-3 bg-surface p-4">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#3a2e28] text-[11px] font-semibold text-accent-2">
-                      LM
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-cream">
-                        „Jemand spontan Padel um 19h?“
+                <div className="min-w-0">
+                  <div className="card bg-surface p-4">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#3a2e28] text-[11px] font-semibold text-accent-2">
+                        LM
+                      </div>
+                      <p className="min-w-0 flex-1 text-sm font-medium text-cream">
+                        „Jemand spontan Powder in Ischgl?“
                       </p>
-                      <p className="text-xs text-muted">Lea · vor 2 Min · Neukölln</p>
+                      <span className="shrink-0 rounded-full bg-accent px-3 py-1.5 text-[11px] font-semibold text-white">
+                        +3
+                      </span>
                     </div>
-                    <span className="rounded-full bg-accent px-3 py-1.5 text-[11px] font-semibold text-white">
-                      +3
-                    </span>
+                    <p className="mt-1.5 pl-12 text-xs text-muted">
+                      Lea · vor 2 Min · Sölden
+                    </p>
                   </div>
-                  <div className="mt-3 ml-8 inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-[11px] text-muted">
+                  <div className="mt-3 ml-4 inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-[11px] text-muted">
                     <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                     In 4 Minuten zusammengefunden
                   </div>
@@ -73,7 +75,7 @@ export default function Features() {
           </Reveal>
 
           {small.map((f, i) => (
-            <Reveal key={f.title} delay={i * 0.07}>
+            <Reveal key={f.title} delay={i * 0.07} className="min-w-0">
               <div className="card group h-full p-7 transition-colors hover:border-sand/25">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-surface-2">
                   <f.icon className="h-5 w-5 text-accent" />

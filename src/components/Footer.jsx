@@ -19,7 +19,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              Finde echte Menschen für echte Pläne. Spontan, lokal, verifiziert.
+              Finde deine Crew für den Berg. Powder-Days, Park & Après – gemeinsam.
             </p>
             <p className="mt-4 text-sm text-muted">
               <a
@@ -65,7 +65,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} letsskee. Alle Rechte vorbehalten.</p>
           <p className="inline-flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Made in Berlin
+            Made in den Alpen
           </p>
         </div>
       </div>

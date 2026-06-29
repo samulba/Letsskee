@@ -4,30 +4,30 @@ import SectionHeading from './SectionHeading'
 
 const quotes = [
   {
-    text: 'Bin neu nach Berlin gezogen und hatte nach zwei Wochen schon eine feste Boulder-Crew. letsskee hat mein Sozialleben gerettet.',
+    text: 'Neu in den Bergen und keine Leute zum Fahren? Über letsskee hatte ich nach einem Wochenende eine feste Freeride-Crew.',
     name: 'Mara K.',
-    role: 'Berlin · seit 4 Monaten dabei',
+    role: 'Sölden · seit 2 Saisons dabei',
     initials: 'MK',
     tone: 'bg-[#3a2e28] text-accent-2',
   },
   {
-    text: 'Endlich eine App, die nicht ums Daten geht. Einfach Leute treffen, die dieselben Sachen mögen – genau das hat gefehlt.',
+    text: 'Endlich eine App nur fürs Fahren – kein Dating. Einfach Rider auf meinem Level treffen, genau das hat gefehlt.',
     name: 'Jonas L.',
-    role: 'Hamburg · seit 6 Monaten dabei',
+    role: 'Zermatt · seit 1 Saison dabei',
     initials: 'JL',
     tone: 'bg-[#2e2a3a] text-sand',
   },
   {
-    text: 'Spontan abends Ramen mit drei Fremden, die jetzt Freunde sind. Klingt random, ist aber das Beste an der Stadt geworden.',
+    text: 'Spontan einen Powder-Day mit drei Fremden gefahren, die jetzt meine Stamm-Crew sind. Beste Saison ever.',
     name: 'Lea S.',
-    role: 'München · seit 3 Monaten dabei',
+    role: 'Sankt Anton · seit 2 Saisons dabei',
     initials: 'LS',
     tone: 'bg-[#2a342e] text-sand',
   },
   {
-    text: 'Als Freelancer arbeite ich allein – über letsskee finde ich Co-Working-Buddies und Afterwork. Hat meinen Alltag verändert.',
+    text: 'Als Snowboarder oft allein unterwegs – jetzt finde ich Park-Sessions und Après-Ski direkt im Gebiet.',
     name: 'Tobias R.',
-    role: 'Köln · seit 5 Monaten dabei',
+    role: 'Garmisch · seit 1 Saison dabei',
     initials: 'TR',
     tone: 'bg-[#342a2a] text-accent-2',
   },
@@ -41,7 +41,7 @@ export default function Testimonials() {
           <SectionHeading
             align="left"
             eyebrow="Stimmen"
-            title="Von den ersten Mitgliedern geliebt."
+            title="Von den ersten Ridern geliebt."
           />
           <Reveal className="flex items-center gap-3">
             <div className="flex items-center gap-0.5">

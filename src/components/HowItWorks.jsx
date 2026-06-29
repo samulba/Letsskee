@@ -5,17 +5,17 @@ const steps = [
   {
     num: '01',
     title: 'Sag, worauf du Lust hast',
-    desc: 'Wähle eine Aktivität oder starte dein eigenes Hangout – von Bouldern bis Brunch.',
+    desc: 'Piste, Freeride, Park oder Après-Ski – wähle deine Session oder starte deine eigene.',
   },
   {
     num: '02',
     title: 'Triff deine Crew',
-    desc: 'letsskee zeigt dir verifizierte Leute in der Nähe mit demselben Plan. Ein Tap, und ihr seid verbunden.',
+    desc: 'letsskee zeigt dir verifizierte Rider in deinem Gebiet mit demselben Plan und Level. Ein Tap, und ihr seid verbunden.',
   },
   {
     num: '03',
-    title: 'Seht euch – im echten Leben',
-    desc: 'Treffpunkt klären, hingehen, loslegen. Raus aus der App, rein ins echte Leben.',
+    title: 'Ab auf den Berg',
+    desc: 'Treffpunkt klären, einsteigen, abfahren. Raus aus der App, rauf auf den Berg.',
   },
 ]
 
@@ -25,7 +25,7 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="So funktioniert’s"
-          title="In drei Schritten unter Leute."
+          title="In drei Schritten auf den Berg."
         />
 
         <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-3">

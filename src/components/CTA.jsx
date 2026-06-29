@@ -27,8 +27,8 @@ export default function CTA() {
             Sei von Anfang an dabei.
           </h2>
           <p className="mx-auto mt-4 max-w-md leading-relaxed text-muted">
-            Sichere dir deinen Platz – begrenzte Plätze pro Stadt. Kein Spam,
-            jederzeit kündbar.
+            Sichere dir deinen Platz – begrenzte Plätze pro Skigebiet. Kein
+            Spam, jederzeit kündbar.
           </p>
 
           {sent ? (

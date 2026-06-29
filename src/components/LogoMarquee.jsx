@@ -1,16 +1,16 @@
 const items = [
-  'Bouldern',
-  'Coffee & Co-Work',
-  'Padel',
-  'Foodie-Runs',
-  'Kino',
-  'Running Crew',
-  'Live-Konzerte',
-  'Museum Hops',
-  'Afterwork',
-  'Sunrise Hikes',
-  'Game Nights',
-  'Weekend Trips',
+  'Powder-Days',
+  'Freeride',
+  'Park & Pipe',
+  'Carving',
+  'Skitouren',
+  'Backcountry',
+  'Langlauf',
+  'Après-Ski',
+  'Night-Sessions',
+  'Snowboard',
+  'Tiefschnee',
+  'Roadtrips',
 ]
 
 export default function LogoMarquee() {
