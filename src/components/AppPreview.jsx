@@ -23,9 +23,9 @@ const feed = [
     title: 'Powder-Day Freeride',
     where: 'Gaislachkogl · heute 09:00',
     people: [
-      { i: 'MK', tone: 'bg-[#3a2e28] text-accent-2' },
-      { i: 'JL', tone: 'bg-[#2e2a3a] text-sand' },
-      { i: 'AS', tone: 'bg-[#2a342e] text-sand' },
+      { i: 'MK', tone: 'bg-[#13335a] text-accent' },
+      { i: 'JL', tone: 'bg-[#2a2f5c] text-accent-2' },
+      { i: 'AS', tone: 'bg-[#123a4d] text-accent' },
     ],
     note: 'Mara + 2 dabei',
     primary: true,
@@ -34,8 +34,8 @@ const feed = [
     title: 'Park-Session',
     where: 'Obergurgl Snowpark · 13:00',
     people: [
-      { i: 'TR', tone: 'bg-[#342a2a] text-accent-2' },
-      { i: 'NK', tone: 'bg-[#2e2a3a] text-sand' },
+      { i: 'TR', tone: 'bg-[#2c2a5e] text-accent-2' },
+      { i: 'NK', tone: 'bg-[#13335a] text-accent' },
     ],
     note: 'Tobias + 1 dabei',
   },

@@ -8,28 +8,28 @@ const quotes = [
     name: 'Mara K.',
     role: 'Sölden · seit 2 Saisons dabei',
     initials: 'MK',
-    tone: 'bg-[#3a2e28] text-accent-2',
+    tone: 'bg-[#13335a] text-accent',
   },
   {
     text: 'Endlich eine App nur fürs Fahren – kein Dating. Einfach Rider auf meinem Level treffen, genau das hat gefehlt.',
     name: 'Jonas L.',
     role: 'Zermatt · seit 1 Saison dabei',
     initials: 'JL',
-    tone: 'bg-[#2e2a3a] text-sand',
+    tone: 'bg-[#2a2f5c] text-accent-2',
   },
   {
     text: 'Spontan einen Powder-Day mit drei Fremden gefahren, die jetzt meine Stamm-Crew sind. Beste Saison ever.',
     name: 'Lea S.',
     role: 'Sankt Anton · seit 2 Saisons dabei',
     initials: 'LS',
-    tone: 'bg-[#2a342e] text-sand',
+    tone: 'bg-[#123a4d] text-accent',
   },
   {
     text: 'Als Snowboarder oft allein unterwegs – jetzt finde ich Park-Sessions und Après-Ski direkt im Gebiet.',
     name: 'Tobias R.',
     role: 'Garmisch · seit 1 Saison dabei',
     initials: 'TR',
-    tone: 'bg-[#342a2a] text-accent-2',
+    tone: 'bg-[#2c2a5e] text-accent-2',
   },
 ]
 

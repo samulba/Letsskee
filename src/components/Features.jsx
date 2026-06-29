@@ -51,7 +51,7 @@ export default function Features() {
                 <div className="min-w-0">
                   <div className="card bg-surface p-4">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#3a2e28] text-[11px] font-semibold text-accent-2">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#13335a] text-[11px] font-semibold text-accent">
                         LM
                       </div>
                       <p className="min-w-0 flex-1 text-sm font-medium text-cream">

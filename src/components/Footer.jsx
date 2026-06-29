@@ -8,7 +8,7 @@ const cols = [
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-line px-5 py-14 sm:px-8">
+    <footer className="relative border-t border-line bg-deep px-5 py-14 sm:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
@@ -64,7 +64,7 @@ export default function Footer() {
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 text-xs text-muted sm:flex-row">
           <p>© {new Date().getFullYear()} letsskee. Alle Rechte vorbehalten.</p>
           <p className="inline-flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            <span className="h-1.5 w-1.5 rounded-full bg-mint" />
             Made in den Alpen
           </p>
         </div>

@@ -13,10 +13,10 @@ const up = {
 }
 
 const members = [
-  { initials: 'MK', tone: 'bg-[#3a2e28] text-accent-2' },
-  { initials: 'JL', tone: 'bg-[#2e2a3a] text-sand' },
-  { initials: 'AS', tone: 'bg-[#2a342e] text-sand' },
-  { initials: 'TR', tone: 'bg-[#342a2a] text-accent-2' },
+  { initials: 'MK', tone: 'bg-[#13335a] text-accent' },
+  { initials: 'JL', tone: 'bg-[#2a2f5c] text-accent-2' },
+  { initials: 'AS', tone: 'bg-[#123a4d] text-accent' },
+  { initials: 'TR', tone: 'bg-[#2c2a5e] text-accent-2' },
 ]
 
 export default function Hero() {
@@ -38,8 +38,8 @@ export default function Hero() {
             className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-3.5 py-1.5 text-xs font-medium text-sand"
           >
             <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-75" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-mint" />
             </span>
             Private Beta · jetzt in 12 Skigebieten
           </motion.div>
@@ -49,10 +49,10 @@ export default function Hero() {
             initial="hidden"
             animate="show"
             custom={1}
-            className="mt-7 font-display text-[2.75rem] font-medium leading-[1.04] tracking-[-0.02em] text-cream sm:text-6xl lg:text-[4.25rem]"
+            className="mt-7 font-display text-[2.85rem] font-extrabold leading-[1.02] tracking-[-0.03em] text-cream sm:text-6xl lg:text-[4.5rem]"
           >
             Finde{' '}
-            <span className="italic text-accent">deine Crew</span>{' '}
+            <span className="text-energetic">deine Crew</span>{' '}
             für den Berg.
           </motion.h1>
 
@@ -78,14 +78,14 @@ export default function Hero() {
           >
             <a
               href="#waitlist"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-cream px-7 py-3.5 text-sm font-semibold text-bg transition-colors hover:bg-white"
+              className="btn-energetic group inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition-transform hover:scale-[1.04]"
             >
               Beta beitreten
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
               href="#how"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-cream transition-colors hover:border-sand/40"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-surface/50 px-7 py-3.5 text-sm font-semibold text-cream transition-colors hover:border-accent/50 hover:text-accent"
             >
               So funktioniert’s
             </a>

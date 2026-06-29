@@ -55,7 +55,7 @@ export default function CTA() {
               />
               <button
                 type="submit"
-                className="group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-cream px-7 py-3.5 text-sm font-semibold text-bg transition-colors hover:bg-white"
+                className="btn-energetic group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-7 py-3.5 text-sm font-bold transition-transform hover:scale-[1.04]"
               >
                 Beitreten
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

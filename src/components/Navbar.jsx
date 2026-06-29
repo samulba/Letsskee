@@ -50,7 +50,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-2 md:flex">
           <a
             href="#waitlist"
-            className="rounded-full bg-cream px-5 py-2.5 text-sm font-semibold text-bg transition-colors hover:bg-white"
+            className="btn-energetic rounded-full px-5 py-2.5 text-sm font-bold transition-transform hover:scale-[1.04]"
           >
             Beta beitreten
           </a>
@@ -88,7 +88,7 @@ export default function Navbar() {
               <a
                 href="#waitlist"
                 onClick={() => setOpen(false)}
-                className="mt-2 rounded-full bg-cream px-5 py-3 text-center text-sm font-semibold text-bg"
+                className="btn-energetic mt-2 rounded-full px-5 py-3 text-center text-sm font-bold"
               >
                 Beta beitreten
               </a>
